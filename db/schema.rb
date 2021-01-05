@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_04_174837) do
+ActiveRecord::Schema.define(version: 2021_01_04_231153) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "person_id"
     t.integer "animal_id"
-    t.integer "fee"
   end
 
   create_table "animals", force: :cascade do |t|
@@ -25,23 +24,31 @@ ActiveRecord::Schema.define(version: 2021_01_04_174837) do
     t.string "breed"
     t.string "personality"
     t.boolean "adopted"
+    t.integer "shelter_id"
+    t.string "species"
+    t.string "img_url"
+    t.integer "fee"
   end
 
   create_table "appointments", force: :cascade do |t|
     t.integer "person_id"
     t.integer "shelter_id"
     t.string "date"
-    t.time "time"
+    t.integer "time"
   end
 
   create_table "people", force: :cascade do |t|
-    t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.string "first_name"
+    t.string "last_name"
   end
 
   create_table "shelters", force: :cascade do |t|
-    t.integer "animal_id"
+    t.string "name"
+    t.string "address"
+    t.string "hours"
+    t.string "phone_number"
   end
 
 end

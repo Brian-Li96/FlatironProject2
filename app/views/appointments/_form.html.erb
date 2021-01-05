@@ -1,0 +1,9 @@
+<%= form_for @appointment do |f| %>
+<%= f.label :person%>
+<%= f.collection_select :person_id, Person.all, :id, :name%>
+<%= f.label :date%>
+<%= f.text_field :date%><br><br>
+<%= f.label :time %>
+<%= f.number_field :time %>
+<%= f.submit%>
+<%end%>

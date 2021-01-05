@@ -1,0 +1,4 @@
+<h1> Welcome <%= @person.first_name%>!</h1> 
+<hr/>
+<h3> Sensitive User Data </h3>
+<%= button_to "Log out", logout_path, method: :delete %>
