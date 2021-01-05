@@ -1,0 +1,12 @@
+<br><h1> New Animal Form </h1> <br><hr/>
+<br>
+
+<% if flash[:errors]%> 
+<% flash[:errors].each do |message| %>
+    <h3><li style= 'color:red'> <%= message %> </li></h3>
+    <%end%>
+    </ul>
+    <%end%>
+    <br>
+<%= render "form"%>
+   

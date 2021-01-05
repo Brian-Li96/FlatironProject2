@@ -1,0 +1,34 @@
+<ul>
+<%= form_for @animal do |f| %>
+
+    <h3><%=f.label :species %>: <br>
+    <%= f.select :species, ['cat', 'dog']%><br><br>
+
+    <%=f.label :name %>:<br>
+    <%= f.text_field :name%><br><br>
+
+    <%=f.label :age %>:<br>
+    <%=f.select :age, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']%>
+    <br><br>
+
+    <%=f.label :gender %>:<br>
+    <%=f.select :gender, ['male', 'female']%><br><br>
+    
+
+    <%=f.label :breed %>:<br>
+    <%=f.text_field :breed %><br><br>
+
+    <%=f.label :personality %>: <br>
+    <%=f.select :personality, ['friendly', 'energetic', 'laidback', 'shy', 'mischievous', 'playful']%>
+   <br><br>
+
+    <%=f.label :img_url %> (Optional Image Link)<br>
+    <%=f.text_field :img_url%><br><br>
+
+   <%= f.label :shelter_id %>: <br>
+   <%= f.collection_select :shelter_id, Shelter.all, :id, :name%>
+   <br><br>
+    <%= f.submit%></h3>
+    <%end %>
+    </ul>
+   
