@@ -44,6 +44,4 @@ def animal_params
     params.require(:animal).permit(:name, :age, :gender, :breed, :personality, :species, :shelter_id, :img_url)
 end 
 
-
-
 end

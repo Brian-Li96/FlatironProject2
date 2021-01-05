@@ -1,0 +1,7 @@
+<h1> Adoption Form Page </h1>
+
+<%= form_for @adoption do |a| %>
+    Select a person: <%= a.collection_select(:person_id, Person.all, :id, :first_name) %>
+    Choose an animal: <%= a.collection_select(:animal_id, Animal.all, :id, :name) %>
+    <%= a.submit %>
+<% end %>

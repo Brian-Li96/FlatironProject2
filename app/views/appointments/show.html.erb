@@ -1,0 +1,8 @@
+<h1> Appointment Show Page </h1>
+
+Shelter: <%= @appointment.shelter.name %> <br><br>
+Date of Appointment: <%=  @appointment.date %> <br><br>
+Time of Appointment: <%= @appointment.time %> <br><br>
+
+
+<%= link_to "Edit Appointment", new_appointment_path(@appointment) %>
