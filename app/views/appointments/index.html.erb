@@ -1,0 +1,5 @@
+<h1> Appointments Index Page </h1>
+
+<% @appointments.each do |appointment| %>
+    <%= link_to "#{appointment}", appointment_path(appointment) %> <br>
+  <% end %>

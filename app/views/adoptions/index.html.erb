@@ -1,0 +1,5 @@
+<h1> Adoption Index Page </h1>
+
+<% @adoptions.each do |adoption| %>
+    <%= link_to "#{adoption.animal.name}", adoption_path(adoption) %> <br>
+  <% end %>
