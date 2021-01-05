@@ -1,0 +1,24 @@
+<h1> Welcome to <%=@animal.name%>'s Page </h1><hr/>
+<br>
+
+<img src= <%= @animal.img_url %> height="450"> <br><br>
+
+<h2>Hi!  I am so excited to meet you and I love making new friends! 
+Still looking to adopt an adordable <%= @animal.species %>!? 
+<br>Well, look no more! <br>
+My name is <%= @animal.name %> and I am <%=@animal.age%> years old.<br>  
+I am a <%=@animal.gender %> <%= @animal.breed %> breed who is known to be very <%= @animal.personality%>! <br> 
+I hope to share my new life with you at my furever home!</h2><br>
+
+<h3>Adoption Fee: $<%=@animal.fee%></h2>
+<h3>**heartworm medication, updated shots, paperwork and a toy are all included in the adoption fee**</h3><br>
+Let's meet up and play!
+link_to "Appointment at Shelter", appointment_path(@appointment)<br><br>
+Let's go home!
+link_to "Adopt this Pet!", adoption_path(@adoption)<br>
+
+
+<h2><%= link_to "See All My Buddies", animals_path%></h2><br>
+
+
+

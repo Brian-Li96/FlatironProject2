@@ -1,0 +1,18 @@
+<h1> All Animals Available for Adoption </h1> <hr/>
+<ul>
+<h2> Dogs: </h2>
+<% @animals.each do |animal| %>
+    <% if animal.species === "dog"%>
+ <h3><li> <%= link_to animal.name, animal_path(animal)%></li></h3>
+ <%end%>
+ <%end%>
+
+ <br><br>
+ <h2> Cats: </h2>
+<% @animals.each do |animal| %>
+    <% if animal.species === "cat"%>
+ <h3><li> <%= link_to animal.name, animal_path(animal)%></li></h3>
+ <%end%>
+ <%end%>
+ 
+    </ul>
