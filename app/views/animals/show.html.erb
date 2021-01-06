@@ -1,29 +1,49 @@
-<h1> Welcome to <%=@animal.name%>'s Page </h1><hr/>
+<h1> Meet <%=@animal.name%>! </h1><hr/>
 <br>
 
-<img src= <%= @animal.img_url %> height="450"> <br><br>
+<img src= <%= @animal.img_url %> height="550" width="400"> <br><br>
 
-<h2>Hi!  I am so excited to meet you and I love making new friends! 
-Still looking to adopt an adordable <%= @animal.species %>!? 
-<br>Well, look no more! <br>
+
+<%if @animal.adopted %>
+<%= @animal.name%> was adopted by
+
+<% @animal.adoptions.each do |adopt| %>
+ <%=adopt.person.first_name %>
+ <%end%>
+
+<h2> I am grateful to now be at my furever home with my new family! 
+Thank you for visiting our site so that my friends may also have the <br>
+same opportunity as me!  They are all loyal and amazing animals, who I 
+know would make great pets!  I hope you all have the same happy <br>
+ending as me! </h2><br>
+
+<h2><%= link_to "See All Paws", animals_path%></h2><br>
+
+<%else%>
+
+<h4>Hi there new friend!  I am so excited to meet you! 
+Word is out that you're looking to adopt an adordable <%= @animal.species %>! 
+<br>Well, look no more! <br>  
 My name is <%= @animal.name %> and I am <%=@animal.age%> years old.<br>  
-I am a <%=@animal.gender %> <%= @animal.breed %> breed who is known to be very <%= @animal.personality%>! <br> 
-I hope to share my new life with you at my furever home!</h2><br>
+I am a <%=@animal.gender %> <%= @animal.breed %> breed who is known to be very <%= @animal.personality%>. <br> 
+I hope to share my new life with you at my furever home soon!</h4><br>
 
-<h3>Adoption Fee: $<%=@animal.fee%></h2>
-<h3>**heartworm medication, updated shots, paperwork and a toy are all included in the adoption fee**</h3><br>
+<h4>Adoption Fee: $<%=@animal.fee%></h4>
+<h5>**heartworm medication, updated vaccinations, paperwork and a toy are all included in the adoption fee**</h5><br>
 Let's meet up and play!
 link_to "Appointment at Shelter", appointment_path(@appointment)<br><br>
 Let's go home!
 link_to "Adopt this Pet!", adoption_path(@adoption)<br>
 
 
-<h2><%= button_to "See All My Buddies!", animals_path%></h2>
+
 
 <h2><%= button_to "Adopt Me!", new_adoption_path %></h2>
 
 <h2><%= button_to "Come Play With Me!", new_appointment_path%></h2>
 
+<h2><%= link_to "See All Paws", animals_path%></h2><br>
 
 
+<%end%>
 
