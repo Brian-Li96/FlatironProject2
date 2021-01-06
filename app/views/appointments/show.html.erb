@@ -6,3 +6,5 @@ Time of Appointment: <%= @appointment.time %> <br><br>
 
 
 <%= link_to "Edit Appointment", new_appointment_path(@appointment) %>
+
+<%= link_to "Delete Appointment", appointments_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
