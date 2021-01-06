@@ -1,6 +1,11 @@
-<h1> Adoption Form Page </h1><hr/><br>
+<h1> Adoption Form Page </h1><hr/>
 
-<%= form_for @adoption do |a| %>
-    Choose an animal: <%= a.collection_select(:animal_id, Animal.all, :id, :name) %>
-    <%= a.submit %>
-<% end %>
+<%= form_for @adoption do |f| %>
+   
+    <h3>Select your fur-kid!<br>
+     <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %><br><br></h3>
+    <%= f.submit %>
+    <%end%>
+
+
+

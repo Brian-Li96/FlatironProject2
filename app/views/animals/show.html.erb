@@ -5,17 +5,16 @@
 
 
 <%if @animal.adopted %>
-<%= @animal.name%> was adopted by
+<h4><%= @animal.name%> was adopted by
 
 <% @animal.adoptions.each do |adopt| %>
- <%=adopt.person.first_name %>
+ <%=adopt.person.first_name %> <%=adopt.person.last_name %></h4>
  <%end%>
 
-<h2> I am grateful to now be at my furever home with my new family! 
-Thank you for visiting our site so that my friends may also have the <br>
-same opportunity as me!  They are all loyal and amazing animals, who I 
-know would make great pets!  I hope you all have the same happy <br>
-ending as me! </h2><br>
+<h3> I am grateful to now be at my furever home with my new family! 
+Thank you for visiting our site so that my friends may also have the 
+same opportunity as me!  They are all loyal and amazing pets who will make a great addition to any family! <br>
+</h3><br>
 
 <h2><%= link_to "See All Paws", animals_path%></h2><br>
 
