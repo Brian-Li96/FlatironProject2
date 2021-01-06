@@ -1,4 +1,11 @@
 <h1> Welcome <%= @person.first_name%>!</h1> 
 <hr/>
 <h3> Sensitive User Data </h3>
+
+<%= button_to "Make an adoption", new_adoption_path %>
+
+<%= button_to "Make an appointment", new_appointment_path %>
+
+<%= button_to "Show all animals", animals_path %>
+
 <%= button_to "Log out", logout_path, method: :delete %>

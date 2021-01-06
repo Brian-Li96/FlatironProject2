@@ -20,7 +20,7 @@ holly = Person.create(email: "Holly@office.com", password: "office555", first_na
 jim = Person.create(email: "Jim@office.com", password: "office777", first_name: "Jim", last_name: "Halpert")
 
 #Shelter #name, #address, #phone-number 
-s1 = Shelter.create(name:"Pet Paradise", address: "1116 Furlane Drive, Scranton, PA 15001", hours: "Monday-Saturday 10:00am - 7:00pm", phone_number: "570-252-6555")
+s1 = Shelter.create(name:"New Beginnings", address: "1116 Furlane Drive, Scranton, PA 15001", hours: "Monday-Saturday 10:00am - 7:00pm", phone_number: "570-252-6555")
 
 
 #Animal-DOGS
