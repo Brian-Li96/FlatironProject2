@@ -38,9 +38,9 @@ link_to "Adopt this Pet!", adoption_path(@adoption)<br>
 
 
 
-<h2><%= button_to "Adopt Me!", new_adoption_path %></h2>
+<h2><%= button_to "Adopt Me!", new_adoption_path, method: :get %></h2>
 
-<h2><%= button_to "Come Play With Me!", new_appointment_path%></h2>
+<h2><%= button_to "Come Play With Me!", new_appointment_path, method: :get %></h2>
 
 <h2><%= link_to "See All Paws", animals_path%></h2><br>
 

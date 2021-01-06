@@ -14,8 +14,9 @@ class AppointmentsController < ApplicationController
 
     def create
         @appointment = Appointment.new(appointment_params)
+        byebug
         if @appointment.save
-            redirect_to appointments_path(@appointment)
+            redirect_to appointment_path(@appointment)
         else
             render new_appointment_path
         end
@@ -39,7 +40,7 @@ class AppointmentsController < ApplicationController
     end
 
     def appointment_params
-        params.require(:appointment).permit(:shelter_id, :date, :time)
+        params.require(:appointment).permit(session[:id], :shelter_id, :animal_id, :date, :time)
     end
         
 end
