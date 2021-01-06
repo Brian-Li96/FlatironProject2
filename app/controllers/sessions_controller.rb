@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     def create
         @person = Person.find_by(email: params[:person][:email])
         if @person && @person.authenticate(params[:person][:password])
-            sessions[:id] = @person.id
+            session[:id] = @person.id
             redirect_to person_path(@person)
         else
             flash[:errors] = ['Email or password is incorrect']

@@ -1,6 +1,6 @@
 class Appointment < ApplicationRecord
 
-belongs_to :person
-belongs_to :shelter
+belongs_to :person, optional: true
+belongs_to :shelter, optional: true
 
 end
