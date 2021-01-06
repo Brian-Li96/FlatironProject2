@@ -6,8 +6,10 @@
 
 <%if @animal.adopted %>
 <%= @animal.name%> was adopted by
-<% 
- <%=  %>
+
+<% @animal.adoptions.each do |adopt| %>
+ <%=adopt.person.first_name %>
+ <%end%>
 
 <h2> I am grateful to now be at my furever home with my new family! 
 Thank you for visiting our site so that my friends may also have the <br>

@@ -10,4 +10,7 @@ validates :breed, presence: true
 validates :age, presence: true
 validates :personality, presence: true
 
+
+
+
 end 
