@@ -39,7 +39,7 @@ class AppointmentsController < ApplicationController
     end
 
     def appointment_params
-        params.require(:appointment).permit(:shelter_id, :date, :time)
+        params.require(:appointment).permit(session[:id], :shelter_id, :animal_id, :date, :time)
     end
         
 end
