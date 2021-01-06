@@ -11,6 +11,12 @@ validates :age, presence: true
 validates :personality, presence: true
 
 
+def self.not_adopted
+    #list of all animals that are NOT adopted
+    Animal.all.select do |animal|
+    animal.adopted == false
+    end 
+    end
 
 
 end 
