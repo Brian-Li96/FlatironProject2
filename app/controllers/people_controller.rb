@@ -6,6 +6,11 @@ class PeopleController < ApplicationController
         @person = Person.new
     end
 
+    def show
+        @person = Person.find(params[:id])
+    end
+    
+
     def create
     @person = Person.new(person_params)
     if @person.valid?
