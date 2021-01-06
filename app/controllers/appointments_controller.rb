@@ -20,6 +20,7 @@ class AppointmentsController < ApplicationController
             render new_appointment_path
         end
     end
+    
 
     def edit 
         @appointment = Appointment.find(params[:id])
