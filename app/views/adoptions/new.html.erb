@@ -1,6 +1,5 @@
 <h1> Adoption Form Page </h1><hr/><br>
 
-#session[:id]
 <%= form_for @adoption do |a| %>
     Choose an animal: <%= a.collection_select(:animal_id, Animal.all, :id, :name) %>
     <%= a.submit %>

@@ -1,8 +1,5 @@
-<h1> Appointment Form Page </h1>
-
 <%= form_for @appointment do |a| %>
     Please enter a date: <%= a.text_field :date %> <br><br>
     Please choose a time (24-hour format): <%= a.number_field :time %> <br><br>
     <%= a.submit%>
 <% end %>
-
