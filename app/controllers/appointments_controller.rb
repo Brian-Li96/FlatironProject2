@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.new(appointment_params)
         byebug
         if @appointment.save
-            redirect_to appointment_path(@appointment)
+            redirect_to appointments_path(@appointment)
         else
             render new_appointment_path
         end
