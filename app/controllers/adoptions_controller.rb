@@ -10,6 +10,7 @@ class AdoptionsController < ApplicationController
 
     def new
         @adoption = Adoption.new
+        @animal = Animal.find(params[:adoption][:animal_id])
     end
 
     def create

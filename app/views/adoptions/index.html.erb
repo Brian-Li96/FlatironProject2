@@ -1,8 +1,0 @@
-<h1> Adoption Index Page </h1>
-
-<% @adoptions.each do |adoption| %>
-  <% adoption.animal == true %>
-    <%= link_to "#{adoption.animal.name}", animals_path %> <br>
-<% end %>
-<br>
-  <%= link_to "Back to Animals", animals_path %>
