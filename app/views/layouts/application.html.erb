@@ -1,15 +1,42 @@
+
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+  h2 {
+  font-size: 30px;
+}
+h2   {color: DodgerBlue;}
+
+  body {background-color: Snow;}
+h1   {color: DarkOrange;}
+</style>
+</head>
+<body>
+
     <title>PetsProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+    <div class="container">
+  <nav>
+    <div class="nav-wrapper blue darken-1">
+      <a  class="brand-logo center"><h2>
+         New Beginnings Shelter</h2></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      
+      </ul>
+    </div>
+  </nav>
   <body>
+
+  <div class="container">
+  
+
     <%= yield %>
+    
+    </div> 
   </body>
 </html>

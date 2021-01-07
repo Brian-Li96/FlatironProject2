@@ -20,7 +20,7 @@ holly = Person.create(email: "Holly@office.com", password: "office555", first_na
 jim = Person.create(email: "Jim@office.com", password: "office777", first_name: "Jim", last_name: "Halpert")
 
 #Shelter #name, #address, #phone-number 
-s1 = Shelter.create(name:"Pet Paradise", address: "1116 Furlane Drive, Scranton, PA 15001", hours: "Monday-Saturday 10:00am - 7:00pm", phone_number: "570-252-6555")
+s1 = Shelter.create(name:"New Beginnings", address: "1116 Furlane Drive, Scranton, PA 15001", hours: "Monday-Saturday 10:00am - 7:00pm", phone_number: "570-252-6555")
 
 
 #Animal-DOGS
@@ -34,7 +34,7 @@ jenny = Animal.create(name: "Jenny", age: 4 , gender: "female", breed: "corgi", 
 spot = Animal.create(name: "Spot", age: 2 , gender: "male", breed: "dalmation", personality: "mischievous", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://i.pinimg.com/736x/21/12/a1/2112a17ecadb605fe549805ae60b8511.jpg", fee: 50)
 lassie = Animal.create(name: "Lassie", age: 4 , gender: "female", breed: "border collie", personality: "playful", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://celticmoonbc.weebly.com/uploads/6/2/7/8/62784141/31949901-10214376425057808-1045677021629251584-n_orig.jpg", fee: 60)
 togo = Animal.create(name: "Togo", age: 2 , gender: "male", breed: "husky", personality: "energetic", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://preview.redd.it/guxo1r7tnrd11.jpg?auto=webp&s=2ae3a2a439bbf721d14dd3ac0724809ec7c3bc94", fee: 90)
-rex = Animal.create(name: "Rex", age: 5 , gender: "male", breed: "doberman pinscher", personality: "energetic", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://dpca.org/wp-content/uploads/fb_2019-06-15T14-08-28_2411187228924808.jpg", fee: 90)
+rex = Animal.create(name: "Rex", age: 5 , gender: "male", breed: "doberman pinscher", personality: "energetic", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://i.pinimg.com/originals/3e/60/c8/3e60c8ab7032f242eba041de39887397.jpg", fee: 90)
 charlie = Animal.create(name: "Charlie", age: 2 , gender: "male", breed: "shiba inu", personality: "energetic", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://photos.puppyspot.com/8/listing/639508/photo/5530551_large-resize.jpg", fee: 90)
 lucy = Animal.create(name: "Lucy", age: 3 , gender: "female", breed: "yorkie", personality: "energetic", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://i.pinimg.com/originals/75/98/f0/7598f07941f8f240c7d658c81fe7e669.jpg", fee: 90)
 goldie = Animal.create(name: "Goldie", age: 2 , gender: "female", breed: "mini golden retriever", personality: "playful", adopted: false, shelter_id: s1.id, species: "dog", img_url: "https://i.pinimg.com/originals/0c/e8/cd/0ce8cddcbbb19d11199fa8ae2d81927f.jpg", fee: 180)

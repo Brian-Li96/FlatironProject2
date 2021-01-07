@@ -1,21 +1,28 @@
 class AdoptionsController < ApplicationController
 
-def new
-    @adoption = Adoption.new
-end
-
-def create
-    @adoption = Adoption.new(adoption_params)
-    if @adoption.save 
-        redirect_to adoption_path(@adoption)
-    else
-        render new_adoption_path 
+    def index
+        @adoptions = Adoption.all
     end
-end
 
-def adoption_params
-    params.require(:adoption).permit(:person_id, :animal_id, :fee)
-end
+    def show
+        @adoption = Adoption.find(params[:id])
+    end
 
+    def new
+        @adoption = Adoption.new
+    end
 
+    def create
+        @adoption = Adoption.new(animal_id: params[:adoption][:animal_id])
+        if @adoption.save
+            @adoption.adopted 
+            redirect_to animals_path
+        else
+            render new_adoption_path 
+        end
+    end
+
+    def adoption_params
+        params.require(:adoption).permit!
+    end
 end 

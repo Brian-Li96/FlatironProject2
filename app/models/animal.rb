@@ -10,7 +10,20 @@ validates :breed, presence: true
 validates :age, presence: true
 validates :personality, presence: true
 
-# validates :age, numericality {greater_than_or_equal_to: 1,
-#             less_than_or_equal_to: 20}
+
+def self.not_adopted
+    #list of all animals that are NOT adopted
+    Animal.all.select do |animal|
+    animal.adopted == false
+    end 
+    end
+
+    def self.adopted
+        Animal.all.select do |animal|
+        animal.adopted == true
+        end
+    end
+    
+
 
 end 

@@ -1,0 +1,8 @@
+<h1> Appointments Index Page </h1>
+
+<% @appointments.each do |appointment| %>
+    <%= link_to "#{appointment.date} at #{appointment.time}", appointment_path(appointment) %> <br>
+  <% end %>
+
+  <br><br><br>
+  
