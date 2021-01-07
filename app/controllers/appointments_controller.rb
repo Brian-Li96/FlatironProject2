@@ -14,8 +14,8 @@ class AppointmentsController < ApplicationController
 
     def create
         @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: 1)
-        if @appointment.save
-            redirect_to appointments_path(@appointment)
+        if @appointment.valid?
+            redirect_to person_path(@appointment.person)
         else
             render new_appointment_path
         end

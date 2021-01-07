@@ -1,11 +1,26 @@
-<h1> Adoption Form Page </h1><hr/>
+<h1> Adoption Confirmation Page </h1><hr/>
 
 <%= form_for @adoption do |f| %>
-   
-    <h3>Select your fur-kid!<br>
-     <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %><br><br></h3>
-    <%= f.submit %>
+   <ul>
+    <h3>I am ready to take 
+     <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %> home with me!<br></h3>
+     <h4><li>Once you confirm the adoption we will share the good news and make sure 
+        to get everything ready for your arrival tomorrow! </li><br><br>
+        <li>Your fur baby will be ready between
+        10:00am - 5:00pm <br><br></li>
+         
+     Address: <br> New Beginnings Shelter <br> 1116 Furlane Drive, Scranton, PA 15001 <br><br>
+     Hours: <br>Monday-Saturday 10:00am - 7:00pm<br><br>
+     Office: <br>(570) 252-6555<br><br><br>
+        <li>New Beginnings Shelter thanks you for saving a life! </h4><br></li>
+
+
+    <%= f.submit 'Confirm Adoption'%><br><br><br>
     <%end%>
+</ul>
+  
+
+  
 
 
 

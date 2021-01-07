@@ -19,4 +19,5 @@ def self.not_adopted
     end
 
 
+
 end 
