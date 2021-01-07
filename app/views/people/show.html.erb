@@ -9,7 +9,13 @@ We know they are all excited to meet you!<br>
 <h3> <%= link_to "Browse All Paws", animals_path%></h3><br>
 
 <h3> Your Upcomming Appointments: </h3>
-<li></li>
+
+<ul>
+<% @person.appointments.each do |app| %>
+
+    <li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li>
+        <%end%>
+        </ul>
 
 
 <br><br><br><br>

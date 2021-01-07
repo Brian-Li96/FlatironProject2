@@ -3,6 +3,7 @@ class Animal < ApplicationRecord
 belongs_to :shelter 
 has_many :people, through: :adoptions
 has_many :adoptions 
+has_many :appointments
 
 validates :name, presence: true
 validates :gender, presence: true
@@ -17,6 +18,7 @@ def self.not_adopted
     animal.adopted == false
     end 
     end
+
 
 
 end 
