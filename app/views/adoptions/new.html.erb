@@ -4,6 +4,7 @@
    
     <h3>Select your fur-kid!<br>
      <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %><br><br></h3>
+     <%= f.hidden_field :person_id, value: session[:id] %>
     <%= f.submit %>
     <%end%>
 

@@ -13,15 +13,16 @@ class AdoptionsController < ApplicationController
     end
 
     def create
-        @adoption = Adoption.new(adoption_params)
+        @adoption = Adoption.new(animal_id: params[:adoption][:animal_id], person_id: params[:adoption][:person_id])
         if @adoption.save 
-            redirect_to adoptions_path(@adoption)
+            redirect_to animals_path
         else
             render new_adoption_path 
         end
     end
 
+
     def adoption_params
-        params.require(:adoption).permit(:person_id, :animal_id)
+        params.require(:adoption).permit!
     end
 end 

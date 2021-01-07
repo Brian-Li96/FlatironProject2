@@ -1,9 +1,5 @@
 class AppointmentsController < ApplicationController
 
-    def index
-        @appointments = Appointment.all
-    end
-
     def show
         @appointment = Appointment.find(params[:id])
     end
@@ -13,9 +9,9 @@ class AppointmentsController < ApplicationController
     end
 
     def create
-        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: 1)
+        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: Shelter.first.id, animal_id:params[:appointment][:animal_id], person_id: params[:appointment][:person_id])
         if @appointment.save
-            redirect_to appointments_path(@appointment)
+            redirect_to person_path(@appointment.person)
         else
             render new_appointment_path
         end
@@ -34,7 +30,7 @@ class AppointmentsController < ApplicationController
     def destroy
         @appointment = Appointment.find_by(id: params[:id])
         @appointment.destroy
-        redirect_to appointments_path
+        redirect_to person_path(@appointment.person)
     end
 
     def appointment_params
