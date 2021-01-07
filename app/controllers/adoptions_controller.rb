@@ -22,6 +22,7 @@ class AdoptionsController < ApplicationController
         end
     end
 
+
     def adoption_params
         params.require(:adoption).permit!
     end

@@ -2,4 +2,6 @@
 
 <% @adoptions.each do |adoption| %>
     <%= link_to "#{adoption.animal.name}", adoption_path(adoption) %> <br>
-  <% end %>
+<% end %>
+<br>
+  <%= link_to "Back to Animals", animals_path %>

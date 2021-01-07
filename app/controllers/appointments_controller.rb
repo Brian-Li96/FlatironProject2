@@ -1,9 +1,5 @@
 class AppointmentsController < ApplicationController
 
-    def index
-        @appointments = Appointment.all
-    end
-
     def show
         @appointment = Appointment.find(params[:id])
     end
@@ -34,7 +30,7 @@ class AppointmentsController < ApplicationController
     def destroy
         @appointment = Appointment.find_by(id: params[:id])
         @appointment.destroy
-        redirect_to appointments_path
+        redirect_to person_path(@appointment.person)
     end
 
     def appointment_params
