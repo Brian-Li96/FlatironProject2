@@ -16,14 +16,14 @@ def self.not_adopted
     #list of all animals that are NOT adopted
     Animal.all.select do |animal|
     animal.adopted == false
-    end 
     end
+end
 
-    def self.adopted
-        Animal.all.select do |animal|
-        animal.adopted == true
-        end
-    end
+
+def change_adopt_status
+    self.adopted = true 
+end
+ 
     
 
 
