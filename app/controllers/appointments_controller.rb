@@ -9,8 +9,7 @@ class AppointmentsController < ApplicationController
     end
 
     def create
-        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: 1)
-        if @appointment.valid?
+        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: 1, person_id: params[:appointment][:person_id], animal_id: params[:appointment][:animal_id])        if @appointment.save
             redirect_to person_path(@appointment.person)
         else
             render new_appointment_path
