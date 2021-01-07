@@ -20,9 +20,8 @@
  <% @animals.each do |animal| %>
     <% if animal.adopted%> 
     <h3><li> <%= link_to animal.name, animal_path(animal)%></li></h3>
-
- 
  <%end%>
  <%end%>
- 
+ <br><br><br>
+ <%= button_to "Log out", logout_path, method: :delete %>
    
