@@ -18,6 +18,12 @@ def self.not_adopted
     end 
     end
 
+    def self.adopted
+        Animal.all.select do |animal|
+        animal.adopted == true
+        end
+    end
+    
 
 
 end 
