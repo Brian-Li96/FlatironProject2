@@ -10,6 +10,7 @@ class AppointmentsController < ApplicationController
 
     def new 
         @appointment = Appointment.new
+        @animal_id = params[:appointment][:animal_id]
     end
 
     def create
