@@ -1,5 +1,9 @@
 class AppointmentsController < ApplicationController
 
+    def index
+        @appointments = Appointment.all
+    end 
+
     def show
         @appointment = Appointment.find(params[:id])
     end
@@ -9,9 +13,10 @@ class AppointmentsController < ApplicationController
     end
 
     def create
-        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], shelter_id: 1)
+        @appointment = Appointment.new(date: params[:appointment][:date], time: params[:appointment][:time], person_id: params[:appointment][:person_id], shelter_id: 1)
         if @appointment.valid?
-            redirect_to person_path(@appointment.person)
+            @appointment.save
+            redirect_to person_path (@appointment.person)
         else
             render new_appointment_path
         end

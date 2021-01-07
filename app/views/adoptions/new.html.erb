@@ -1,10 +1,10 @@
 <h1> Adoption Confirmation Page </h1><hr/>
 
 <%= form_for @adoption do |f| %>
-<<<<<<< HEAD
    <ul>
     <h3>I am ready to take 
      <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %> home with me!<br></h3>
+     <%= f.hidden_field :person_id, value: session[:id] %>
      <h4><li>Once you confirm the adoption we will share the good news and make sure 
         to get everything ready for your arrival tomorrow! </li><br><br>
         <li>Your fur baby will be ready between
@@ -17,18 +17,9 @@
 
 
     <%= f.submit 'Confirm Adoption'%><br><br><br>
-=======
-   
-    <h3>Select your fur-kid!<br>
-     <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %><br><br></h3>
-     <%= f.hidden_field :person_id, value: session[:id] %>
-    <%= f.submit %>
->>>>>>> 0361268b47c758f16c8b796b31cc2644a9ee2397
+  
     <%end%>
 </ul>
-  
-
-  
 
 
 

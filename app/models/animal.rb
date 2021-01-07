@@ -24,6 +24,7 @@ def self.not_adopted
         animal.adopted == true
         end
     end
+ 
     
 
 

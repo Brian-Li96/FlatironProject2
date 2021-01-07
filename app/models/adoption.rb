@@ -5,5 +5,4 @@ belongs_to :animal
 
 
 
-
 end
