@@ -34,7 +34,7 @@ def update
     redirect_to animal_path(@animal)
 end 
 
-def destroy #delete adopted animals from shelter app 
+def destroy #delete adopted animals from shelter app??
     @animal.destroy
     redirect_to animal_path
 end

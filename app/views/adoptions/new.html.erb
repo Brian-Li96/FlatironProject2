@@ -4,6 +4,7 @@
    <ul>
     <h3>I am ready to take 
      <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %> home with me!<br></h3>
+     <%= f.hidden_field :person_id, value: session[:id] %>
      <h4><li>Once you confirm the adoption we will share the good news and make sure 
         to get everything ready for your arrival tomorrow! </li><br><br>
         <li>Your fur baby will be ready between
@@ -18,9 +19,6 @@
     <%= f.submit 'Confirm Adoption'%><br><br><br>
     <%end%>
 </ul>
-  
-
-  
 
 
 
