@@ -2,9 +2,8 @@
 
 <%= form_for @adoption do |f| %>
    <ul>
-    <h3>I am ready to take 
-     <%= f.collection_select(:animal_id, Animal.not_adopted, :id, :name) %> home with me!<br></h3>
-     <%= f.hidden_field :person_id, value: session[:id] %>
+    <h3>I am ready to take <%= @animal.name %> home with me! </h3>
+      <%= f.hidden_field :person_id, value: session[:id] %>
      <h4><li>Once you confirm the adoption we will share the good news and make sure 
         to get everything ready for your arrival tomorrow! </li><br><br>
         <li>Your fur baby will be ready between
@@ -15,8 +14,8 @@
      Office: <br>(570) 252-6555<br><br><br>
         <li>New Beginnings Shelter thanks you for saving a life! </h4><br></li>
 
-
-    <%= f.submit 'Confirm Adoption'%><br><br><br>
+    <%= f.hidden_field :animal_id, value: @animal.id %>
+    <%= f.submit 'Confirm Adoption', data: { confirm: "Are you sure?" } %><br><br><br>
     <%end%>
 </ul>
 
