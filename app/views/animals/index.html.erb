@@ -18,7 +18,7 @@
  <br><br>
  <h2> Check Out Our Adopted Pets! </h2>
  <% @animals.each do |animal| %>
-    <% if animal.adopted%>
+    <% if animal.adopted%> 
     <h3><li> <%= link_to animal.name, animal_path(animal)%></li></h3>
 
  
