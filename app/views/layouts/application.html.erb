@@ -8,7 +8,10 @@
   <style>
   .nav-link {
     margin-right: 50px;
+    font-size: 30px;
   }
+
+
 </style>
 </head>
 <body>
@@ -31,13 +34,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/people/<%= session[:id] %>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Animals</a>
+              <a class="nav-link" href="/animals" >Animals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/shelters/1">Contact</a>
             </li>
           </ul>
           <span class="navbar-text">
@@ -51,7 +54,7 @@
     </div> 
 
 <div class="footer">
-  <p>New Beginnings - 1116 Furlane Drive, Scranton, PA 15001 - (570) 252-6555 </p>
+  <p><b>New Beginnings - 1116 Furlane Drive, Scranton, PA 15001 - (570) 252-6555 </b></p>
 </div>
 
   </body>

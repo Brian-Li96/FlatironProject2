@@ -27,7 +27,7 @@ class AppointmentsController < ApplicationController
     end
 
     def update
-        @appointment = Appointment.find_by(id: params[:id])
+        @appointment = Appointment.find(params[:id])
         @appointment.update(appointment_params)
         redirect_to appointment_path
     end
