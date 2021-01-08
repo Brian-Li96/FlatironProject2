@@ -1,14 +1,13 @@
-<h1> Appointment Show Page </h1>
+<br>
+<h1 class='title-h1'> Meet & Greet </h1>
+<hr>
 
-Shelter: New Beginnings <br><br>
+<b>Shelter: New Beginnings <br><br>
 Day of Appointment: <%=  @appointment.date %> <br><br>
 Time of Appointment: <%= @appointment.time %> <br><br>
 
 
-<%= link_to "Edit Appointment", edit_appointment_path(@appointment) %> <br><br>
+<%= link_to "Edit Appointment", edit_appointment_path(@appointment), class: 'btn btn-mini btn-warning' %> <br><br>
 
-<%= link_to "Delete Appointment", appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure? Please don't go :(" } %> </li>
+<%= link_to "Delete Appointment", appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure? Please don't go :(" }, class: 'btn btn-mini btn-danger' %> </li>
 <br><br><br>
-Address: <br> New Beginnings Shelter <br> 1116 Furlane Drive, Scranton, PA 15001 <br><br>
-Hours: <br>Monday-Saturday 10:00am - 7:00pm<br><br>
-Office: <br>(570) 252-6555<br><br><br>
