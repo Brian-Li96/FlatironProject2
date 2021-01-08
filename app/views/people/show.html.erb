@@ -13,12 +13,14 @@ We know they are all excited to meet you!<br>
 <ul>
 <% @person.appointments.each do |app| %>
 
-    <li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li>
+    <h4><li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li></h4>
         <%end%>
-        </ul>
+        </ul> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 
 <br><br><br><br>
 <%= link_to "Log out", logout_path, method: :delete, class: 'btn btn-mini btn-warning' %>
 </div>
+
 
