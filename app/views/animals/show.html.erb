@@ -1,4 +1,7 @@
-<br><h1> Meet <%=@animal.name%>! </h1><hr/>
+
+<br>
+<h1 class ='title-h1'> Meet <%=@animal.name%>! </h1><hr/>
+
 <br>
 
 <img src= <%= @animal.img_url %> height="550" width="440"> <br><br>
@@ -7,9 +10,9 @@
 <%if @animal.adopted %>
 <h4><%= @animal.name%> was adopted by
 
-<% @animal.adoptions.each do |adopt| %>
- <%=adopt.person.first_name %> <%=adopt.person.last_name %></h4>
- <%end%>
+<%= @animal.adoptions.first.person.first_name %> <%= @animal.adoptions.first.person.last_name %>
+</h4>
+
 
 <h3> I am grateful to now be at my furever home with my new family! <br>
 Thank you for visiting our site so that my friends may also have the 

@@ -11,8 +11,18 @@
 
     .test-h3 {
       background-image: url('../images/background.jpg');
+     margin-left: 10px;
     }
 
     h1 {
       color: Black;
+    }
+
+    .title-h1 {
+      font-family: "Comic Sans MS";
+      font-size: 50px;
+    }
+
+    .first-h3 {
+      text-indent: 25px;
     }
