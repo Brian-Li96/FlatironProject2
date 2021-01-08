@@ -1,4 +1,4 @@
-<div class='test-h3'><h1> Welcome <%= @person.first_name%>!</h1> 
+<br><div class='test-h3'><h1> Welcome <%= @person.first_name%>!</h1> 
 <hr/>
 
 <h3>We want to take a moment to thank you for creating an account and giving these animals the opportunity for a better life! </h3>
@@ -15,12 +15,13 @@ We know they are all excited to meet you!<br>
 
     <h4><li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li></h4>
         <%end%>
-        </ul> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </ul> <br><br><br><br><br><br><br>
 
 
 
 <br><br><br><br>
 <%= link_to "Log out", logout_path, method: :delete, class: 'btn btn-mini btn-warning' %>
 </div>
+<br><br><br><br>
 
 
