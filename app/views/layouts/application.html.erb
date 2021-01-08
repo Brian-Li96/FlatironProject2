@@ -2,41 +2,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <style>
-  h2 {
-  font-size: 30px;
-}
-h2   {color: DodgerBlue;}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="style.css" text="text/css" rel="stylesheet" >
 
-  body {background-color: Snow;}
-h1   {color: DarkOrange;}
+  <style>
+  .nav-link {
+    margin-right: 50px;
+  }
 </style>
 </head>
 <body>
 
+
     <title>PetsProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'style' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <div class="container">
-  <nav>
-    <div class="nav-wrapper blue darken-1">
-      <a  class="brand-logo center"><h2>
-         New Beginnings Shelter</h2></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-      
-      </ul>
-    </div>
-  </nav>
-  <body>
 
-  <div class="container">
-  
+    <nav class="navbar navbar-expand-lg", style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><%= image_tag '/images/logo.png', size: '75x75' %></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Animals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+          </span>
+        </div>
+      </div>
+    </nav>  
 
     <%= yield %>
-    
-    </div> 
+  
   </body>
 </html>

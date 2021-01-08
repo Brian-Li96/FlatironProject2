@@ -1,0 +1,18 @@
+    h2 {
+        font-size: 30px;
+        color: DodgerBlue;
+    }
+  
+    body {
+      background-image: url('https://st2.depositphotos.com/1106005/8725/i/950/depositphotos_87251666-stock-photo-blue-doggy-tile-pattern-repeat.jpg'
+      );
+          
+    }
+
+    .test-h3 {
+      background-image: url('../images/background.jpg');
+    }
+
+    h1 {
+      color: Black;
+    }
