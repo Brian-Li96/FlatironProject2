@@ -13,13 +13,12 @@ We know they are all excited to meet you!<br>
 <ul>
 <% @person.appointments.each do |app| %>
 
-    <li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li>
+    <h4><li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li></h4>
         <%end%>
-        </ul> <br><br><br><br><br><br>
+        </ul> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        Address: <br> New Beginnings Shelter <br> 1116 Furlane Drive, Scranton, PA 15001 <br><br>
-        Hours: <br>Monday-Saturday 10:00am - 7:00pm<br><br>
-        Office: <br>(570) 252-6555<br><br><br>
-<br><br>
+
 <%= button_to "Log out", logout_path, method: :delete %>
+<br><br><br>
+
 
