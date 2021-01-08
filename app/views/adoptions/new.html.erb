@@ -1,21 +1,21 @@
-<h1> Adoption Confirmation Page </h1><hr/>
+<br>
+<h1 class='title-h1'> Adoption Confirmation </h1><hr/>
 
 <%= form_for @adoption do |f| %>
    <ul>
-    <h3>I am ready to take <%= @animal.name %> home with me! </h3>
+    <h3>I am ready to take <%= @animal.name %> home with me! </h3> 
+    <br>
       <%= f.hidden_field :person_id, value: session[:id] %>
      <h4><li>Once you confirm the adoption we will share the good news and make sure 
         to get everything ready for your arrival tomorrow! </li><br><br>
         <li>Your fur baby will be ready between
-        10:00am - 5:00pm <br><br></li>
-         
-     Address: <br> New Beginnings Shelter <br> 1116 Furlane Drive, Scranton, PA 15001 <br><br>
-     Hours: <br>Monday-Saturday 10:00am - 7:00pm<br><br>
-     Office: <br>(570) 252-6555<br><br><br>
+        10:00am - 5:00pm <br></li>
+        Address: Please see our Contact Page<br><br>
         <li>New Beginnings Shelter thanks you for saving a life! </h4><br></li>
 
     <%= f.hidden_field :animal_id, value: @animal.id %>
-    <%= f.submit 'Confirm Adoption', data: { confirm: "Are you sure?" } %><br><br><br>
+    <button class="btn btn-success" type="submit">Create Adoption!</button>
+
     <%end%>
 </ul>
 

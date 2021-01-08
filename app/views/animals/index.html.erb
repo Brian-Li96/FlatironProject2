@@ -1,6 +1,9 @@
-<br><h1> Meet Our Animals! </h1> <hr/>
 
-<h2> Available Dogs for Adoption: </h2>
+<br>
+<h1 class ='title-h1'> Meet Our Animals! </h1> <hr/>
+
+
+<h2> <u>Available Dogs for Adoption:</u> </h2>
 <% @animals.each do |animal| %>
     <% if animal.adopted == false && animal.species == "dog"%>
  <h3><li> <%= link_to animal.name, animal_path(animal), {:style=>'color:#C71585;', :class => "css_class"} %></li></h3>
@@ -8,7 +11,7 @@
  <%end%>
 
  <br><br>
- <h2> Available Cats for Adoption: </h2>
+ <h2> <u>Available Cats for Adoption:</u> </h2>
 <% @animals.each do |animal| %>
     <% if animal.adopted == false && animal.species == "cat"%>
  <h3><li> <%= link_to animal.name, animal_path(animal), {:style=>'color:#C71585;', :class => "css_class"}%></li></h3>
@@ -16,13 +19,13 @@
  <%end%>
 
  <br><br>
- <h2> Check Out Our Adopted Pets! </h2>
+ <h2> <u>Check Out Our Adopted Pets!</u> </h2>
  <% @animals.each do |animal| %>
     <% if animal.adopted%> 
     <h3><li> <%= link_to animal.name, animal_path(animal), {:style=>'color:#C71585;', :class => "css_class"}%></li></h3>
  <%end%>
  <%end%>
  <br><br><br>
- <%= button_to "Log out", logout_path, method: :delete, class: 'btn btn-mini btn-warning' %>
+ <%= button_to "Log out", logout_path, method: :delete, class: 'btn btn-mini btn-danger' %>
  <br>
    
