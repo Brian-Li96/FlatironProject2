@@ -13,7 +13,6 @@ validates :personality, presence: true
 
 
 def self.not_adopted
-    #list of all animals that are NOT adopted
     Animal.all.select do |animal|
     animal.adopted == false
     end
@@ -23,9 +22,6 @@ end
 def change_adopt_status
     self.adopted = true 
 end
- 
-    
-
 
 
 end 
