@@ -1,5 +1,4 @@
-# README
-New-Beginnings-App
+#New-Beginnings-App
 
 Collaborated with Brian Li to create a Rails application that allows users to browse, schedule playdates and adopt shelter animals:
 
@@ -10,5 +9,3 @@ Collaborated with Brian Li to create a Rails application that allows users to br
 
 Demo: https://www.youtube.com/watch?v=TLob88lna8w&list=PLFqQfEnCEJVce2riSm-OIBbySpzLQzCrD&index=3 
 
-
-# FlatironProject2
