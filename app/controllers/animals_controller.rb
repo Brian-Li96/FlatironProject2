@@ -16,7 +16,6 @@ def create
     @animal = Animal.new(animal_params)
     if @animal.valid?
        @animal.save
-    # animal = Animal.create(animal_params)
        redirect_to animal_path(@animal)
     else
         flash[:errors]= @animal.errors.full_messages
@@ -34,7 +33,7 @@ def update
     redirect_to animal_path(@animal)
 end 
 
-def destroy #delete adopted animals from shelter app??
+def destroy 
     @animal.destroy
     redirect_to animal_path
 end
