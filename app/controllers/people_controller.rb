@@ -17,7 +17,6 @@ class PeopleController < ApplicationController
         @person.save
         session[:id] = @person.id 
         redirect_to person_path(@person)
-    # @person = Appearance.create(person_params)
     else 
         flash[:errors] = @person.errors.full_messages
         redirect_to new_person_path
