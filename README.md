@@ -1,4 +1,5 @@
-# New Beginnings  
+# New Beginnings ![image](https://user-images.githubusercontent.com/62185859/112554792-f630c680-8d94-11eb-89cc-93560f581ea6.png)
+
 ### Project Collaboration
 - Avelon Pang
 - Brian Li
