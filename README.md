@@ -1,5 +1,5 @@
 # New Beginnings  
-### Project By:
+### Project Collaboration
 - Avelon Pang
 - Brian Li
 
@@ -16,6 +16,11 @@ App that allows users to browse, schedule playdates and adopt shelter animals di
 ## Demo
 
 - [Short Demo Video](https://www.youtube.com/watch?v=TLob88lna8w&list=PLFqQfEnCEJVce2riSm-OIBbySpzLQzCrD&index=3)
+
+## Start this Project
+- rails db:migrate
+- rails db:seed
+- rails s
 
 ## User Stories
 - Must login or create an account
