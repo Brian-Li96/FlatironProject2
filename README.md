@@ -23,6 +23,6 @@ App that allows users to browse, schedule playdates and adopt shelter animals di
 - View description of specific animals available for adoption
 - Schedule/add, edit or delete playdates
 - Ability to adopt unlimited animals
-- Display's user's name and adopted pet
+- Displays user's name and adopted pet
 - Browse other pets that are no longer available for adoption
 - User can log out when finished 
