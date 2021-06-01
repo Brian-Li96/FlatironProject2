@@ -1,4 +1,6 @@
 <br>
+<div class="text-center">
+
 <h1 class='title-h1'> Adoption Confirmation </h1><hr/>
 
 <%= form_for @adoption do |f| %>
@@ -15,7 +17,7 @@
 
     <%= f.hidden_field :animal_id, value: @animal.id %>
     <button class="btn btn-success" type="submit">Create Adoption!</button>
-
+</div>
     <%end%>
 </ul>
 

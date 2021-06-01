@@ -1,13 +1,14 @@
-<h1> Login Page </h1>
+<h1 class="text-center"> Login Page </h1>
 <hr/><br>
 <% if flash[:errors]%> 
-<ul>
+
  <% flash[:errors].each do |message| %>
-    <li style= 'color:red'> <%= message %> </li>
-    <%end%>
-    </ul>
+    <h3 class="text-center" style= 'color:red'> <%= message %> </h3>
     <%end%>
 
+    <%end%>
+
+    <div class="text-center">
     <%= form_for @person, :url => '/login' do |f| %>
     <%= f.label :first_name %>:<br>
     <%= f.text_field :first_name %><br><br>
@@ -18,9 +19,11 @@
     <%= f.label :password %>:<br>
     <%= f.password_field :password %><br><br><br>
     <button class="btn btn-warning" type="submit">Log In</button>
+      
 
     <%end%> 
 
     <br>
     <%= link_to "Don't have an account?", new_person_path %>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>

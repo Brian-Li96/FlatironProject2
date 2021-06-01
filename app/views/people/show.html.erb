@@ -1,8 +1,10 @@
 
 <br>
+<div class="text-center">
 <div class='test-h3'><h1 class ='title-h1'> Welcome <%= @person.first_name%>!</h1> 
 
 <hr/>
+
 <h3 class="first-h3">We want to take a moment to thank you for creating an account and giving these animals the opportunity for a better life! </h3>
 
 <h3 class="first-h3"> New Beginnings provides shelter to thousands of animals annually, with the goal of placing all adoptable animals in their forever homes through adoption.
@@ -16,6 +18,7 @@ We know they are all excited to meet you!<br>
 <% @person.appointments.each do |app| %>
 
     <h4><li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li></h4>
+    </div>
         <%end%>
 
         </ul> <br>

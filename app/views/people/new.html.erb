@@ -4,11 +4,12 @@
 
 <% if flash[:errors]%> 
 <% flash[:errors].each do |message| %>
-    <h3><li style= 'color:red'> <%= message %> </li></h3>
+    <h3 class="text-center" style= 'color:red'> <%= message %> </li></h3>
     <%end%>
     </ul>
     <%end%>
     <br>
+    <div class="text-center">
 
     <%= form_for @person do |f| %>
     <%= f.label :first_name %>:<br>
@@ -28,6 +29,6 @@
     <button class="btn btn-warning" type="submit">Create User</button>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+</div>
     <%end%> 
 
