@@ -1,25 +1,34 @@
-# README
+![image](https://user-images.githubusercontent.com/62185859/112554792-f630c680-8d94-11eb-89cc-93560f581ea6.png)
+# New Beginnings 
+### Project Collaboration
+- Avelon Pang
+- Brian Li
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+App that allows users to browse, schedule playdates and adopt shelter animals directly from the site
 
-Things you may want to cover:
+## About 
+- Built with Ruby on Rails and HTML
+- Accessed a Sqlite3 database using ActiveRecord and in a test-driven environment 
+- Implemented a Rails that uses an MVC structure and RESTful conventions on a single page application
+- Designed 7 models with strong many to many relationships with full CRUD functionality 
+- Wrote various loop mechanism for accurate results based on set conditions
 
-* Ruby version
+## Demo
 
-* System dependencies
+- [Short Demo Video](https://www.youtube.com/watch?v=TLob88lna8w&list=PLFqQfEnCEJVce2riSm-OIBbySpzLQzCrD&index=3)
 
-* Configuration
+## Start this Project
+- rails db:migrate
+- rails db:seed
+- rails s
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# FlatironProject2
+## User Stories
+- Must login or create an account
+- Browse all cats and dogs
+- View description of specific animals available for adoption
+- Schedule/add, edit or delete playdates
+- Ability to adopt unlimited animals
+- Displays user's name and adopted pet
+- Browse other pets that are no longer available for adoption
+- User can log out when finished 

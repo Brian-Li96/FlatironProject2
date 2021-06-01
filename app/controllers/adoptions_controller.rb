@@ -19,7 +19,6 @@ class AdoptionsController < ApplicationController
         @adoption.animal.save
         
         if @adoption.save
-            # @adoption.animal.adopted 
             redirect_to animals_path
         else
             render new_adoption_path 
