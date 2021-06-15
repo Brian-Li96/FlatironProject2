@@ -1,6 +1,5 @@
-<!-- ![image](https://user-images.githubusercontent.com/62185859/112554792-f630c680-8d94-11eb-89cc-93560f581ea6.png)
- -->
-![image](https://user-images.githubusercontent.com/62185859/121975379-1b572480-cd47-11eb-8238-269f35bf668a.png)
+![image](https://user-images.githubusercontent.com/62185859/121975435-3aee4d00-cd47-11eb-80df-d2c142284c9d.png)
+
 
 
 # New Beginnings 
