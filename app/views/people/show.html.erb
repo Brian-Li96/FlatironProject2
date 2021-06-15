@@ -3,30 +3,30 @@
 <div class="text-center">
 <div class='test-h3'><h1 class ='title-h1'> Welcome <%= @person.first_name%>!</h1> 
 
-<hr/>
+<hr/><br>
 
-<h3 class="first-h3">We want to take a moment to thank you for creating an account and giving these animals the opportunity for a better life! </h3>
-
-<h3 class="first-h3"> New Beginnings provides shelter to thousands of animals annually, with the goal of placing all adoptable animals in their forever homes through adoption.
+<br> <h3 class="first-h3"><br><br> We want to take a moment to thank you for creating an account and giving these animals the opportunity for a better life! <br><br>
+New Beginnings provides shelter to thousands of animals annually, with the goal of placing all adoptable animals in their forever homes through adoption.
 You can make appointments to come see our fur friend in person, but if it is love at first sight, you can go ahead and adopt right here on our website!<br><br>
-We know they are all excited to meet you!<br>
-<h3> <%= link_to "Browse All Paws", animals_path%></h3><br>
+We know they are all excited to meet you!<br><br><br></h3><br>
+<h2> <%= link_to "All Paws", animals_path%></h2><br><br><br>
 
-<h3 class="first-h3"> <u>Your Upcomming Appointments:</u> </h3>
 
-<ul>
+<h3 class="first-h3"> Your Upcomming Playdate Appointments: </h3><br>
+
+
 <% @person.appointments.each do |app| %>
 
-    <h4><li> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></li></h4>
+    <h4> <%= link_to app.animal.name , appointment_path(app) %> on <%= app.date %></h4>
     </div>
         <%end%>
 
-        </ul> <br>
+         <br>
 
 
 
 
-<br><br><br><br>
+<br><br>
 <%= link_to "Log out", logout_path, method: :delete, class: 'btn btn-mini btn-danger' %>
 </div>
 <br><br><br><br>

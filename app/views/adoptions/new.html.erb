@@ -4,22 +4,20 @@
 <h1 class='title-h1'> Adoption Confirmation </h1><hr/>
 
 <%= form_for @adoption do |f| %>
-   <ul>
+   
     <h3>I am ready to take <%= @animal.name %> home with me! </h3> 
     <br>
       <%= f.hidden_field :person_id, value: session[:id] %>
-     <h4><li>Once you confirm the adoption we will share the good news and make sure 
-        to get everything ready for your arrival tomorrow! </li><br><br>
-        <li>Your fur baby will be ready between
-        10:00am - 5:00pm <br></li>
-        Address: Please see our Contact Page<br><br>
-        <li>New Beginnings Shelter thanks you for saving a life! </h4><br></li>
+     <h4><br><br>Once you confirm the adoption we will share the good news 
+     and make sure to get everything ready for your arrival tomorrow at 5:00pm! <br><br>
+    
+        New Beginnings Shelter thanks you for making such a wonderful home for little <%= @animal.name %>. <br><br>See you soon! <br><br><br> </h4><br>
 
     <%= f.hidden_field :animal_id, value: @animal.id %>
-    <button class="btn btn-success" type="submit">Create Adoption!</button>
+    <button class="btn btn-success" type="submit">Please Confirm Adoption Here!</button>
 </div>
     <%end%>
-</ul>
+
 
 
 

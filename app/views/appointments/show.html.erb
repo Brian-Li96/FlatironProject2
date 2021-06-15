@@ -1,16 +1,16 @@
 <div class="text-center">
 <br>
-<h1 class='title-h1'> Meet & Greet </h1>
+<h1 class='title-h1'> New Beginnings Scheduled Playdate  </h1>
 <hr>
 
 
-<b>Shelter: New Beginnings <br><br>
-Day of Appointment: <%=  @appointment.date %> <br><br>
-Time of Appointment: <%= @appointment.time %> <br><br>
+<h3><b> Shelter: New Beginnings </b><br><br>
+Day of Appointment:  <b><%=  @appointment.date %></b> <br><br>
+Time of Appointment: <b><%= @appointment.time %>:00am </b> <br><br><br><br>
 
 
 <%= link_to "Edit Appointment", edit_appointment_path(@appointment), class: 'btn btn-mini btn-warning' %> <br><br>
 
-<%= link_to "Delete Appointment", appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure? Please don't go :(" }, class: 'btn btn-mini btn-danger' %> </li>
+<%= link_to "Delete Appointment", appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure? Please don't go :(" }, class: 'btn btn-mini btn-danger' %> </h3>
 </div>
 <br><br><br>

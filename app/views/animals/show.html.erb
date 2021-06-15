@@ -2,11 +2,11 @@
 <br>
 <div class="text-center">
 
-<h1 class ='title-h1'> Meet <%=@animal.name%>! </h1><hr/>
+<h1 class ='title-h1'> Nice to meet you, call me <%=@animal.name%>!  </h1><hr/>
 
 <br>
 
-<img src= <%= @animal.img_url %> height="550" width="440"> <br><br>
+<img src= <%= @animal.img_url %> height="550" width="530"> <br><br>
 
 
 <%if @animal.adopted %>
@@ -22,27 +22,26 @@ same opportunity as me! <br>
  They are all loyal and amazing pets who will make a great addition to any family! <br>
 </h3><br>
 
-<h2><%= link_to "See All Paws", animals_path%></h2><br>
+<h2><%= link_to "Meet My Friends!", animals_path%></h2><br>
 
 <%else%>
 
-<h3>Hi there new friend!  I am so excited to meet you! 
+<h3> Hi there friend! Thank you so much for clicking on my name. 
 Word is out that you're looking to adopt an adordable <%= @animal.species %>! 
 <br>Well, look no more! <br>  
 My name is <%= @animal.name %> and I am <%=@animal.age%> years old.<br>  
 I am a <%=@animal.gender %> <%= @animal.breed %> breed who is known to be very <%= @animal.personality%>. <br> 
-I hope to share my new life with you at my furever home soon!</h3><br>
+Can we play together soon? I hope to share my new life with you at my furever home! 
+<br><br>
+<u><b>Adoption Fee</u><b>: $<%=@animal.fee%></h3><br><br>
 
-<h4>Adoption Fee: $<%=@animal.fee%></h4>
-<h4>**heartworm medication, updated vaccinations, paperwork and a toy are all included in the adoption fee**</h4><br>
-
-<h3>Let's meet up and play! <%= link_to "Appointment at Shelter", new_appointment_path(:appointment =>{:animal_id => @animal.id}), method: :get %><br></h3>
-
-<h3>Let's go home!  <%= link_to "Adopt this Pet!", new_adoption_path(:adoption => {:animal_id => @animal.id}), method: :get %><br></h3>
-
-
-<h3>Come see my friends!  <%= link_to "See All Paws", animals_path%><br></h3><br><br>
+<h4>Schedule a Playdate with me! <br> <%= link_to "Appointment at Shelter", new_appointment_path(:appointment =>{:animal_id => @animal.id}), method: :get %></h4>
+<br>
+<h4>Let's go home!  <br><%= link_to "Adopt", new_adoption_path(:adoption => {:animal_id => @animal.id}), method: :get %></h4>
 </div>
+<br>
+<h4>Meet my friends!  <br><%= link_to "See All Paws", animals_path%><br></h4><br><br><br>
+<h5>Heartworm medication, updated vaccinations, paperwork and a toy are all included in the adoption fee</h5><br><br>
 
 <%end%>
 

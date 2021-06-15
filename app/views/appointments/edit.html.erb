@@ -1,18 +1,18 @@
 <div class="text-center">
-<br><h1> Edit Your Appointment </h1>
+<br><h1> Edit Your Playdate Appointment </h1>
 <%= form_for @appointment do |f| %>
-
-
+<br><br>
+<h3>
     Please Select Day:
     <%=f.select :date, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']%><br><br>
 
     <%=f.label :time %>:
-    <%=f.select :time, ['11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm']%>
-    <br><br>
+    <%=f.select :time, ['12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm']%>
+    <br><br><br>
 
-    <%= f.submit 'Edit Appointment', class: 'btn btn-warning' %></h3>
+    <%= f.submit 'Edit Appointment', class: 'btn btn-warning' %>
     <%end %>
-    </ul>
+    
     </div>
-    <br>
+    </h3>
     
