@@ -14,9 +14,9 @@ App that allows users to browse, schedule playdates and adopt shelter animals di
 - Designed 7 models with strong many to many relationships with full CRUD functionality 
 - Wrote various loop mechanism for accurate results based on set conditions
 
-## Demo - In Progress
+## Demo -
 
-- [Short Demo Video]()
+- [Short Demo Video](https://youtu.be/cmxgzGF6azU)
 
 ## Start this Project
 - rails db:migrate
