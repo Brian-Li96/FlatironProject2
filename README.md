@@ -7,6 +7,7 @@
 ## Overview
 App that allows users to browse, schedule playdates and adopt shelter animals directly from the site
 
+
 ## About 
 - Built with Ruby on Rails and HTML
 - Accessed a Sqlite3 database using ActiveRecord and in a test-driven environment 
@@ -19,7 +20,7 @@ App that allows users to browse, schedule playdates and adopt shelter animals di
 ## Start this Project
 - rails db:migrate
 - rails db:seed
-- rails s
+- rails server or rails s
 - open http://localhost:3000/ in broswer
 
 ## User Stories
