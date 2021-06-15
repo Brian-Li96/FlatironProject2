@@ -1,10 +1,7 @@
 ![image](https://user-images.githubusercontent.com/62185859/121975435-3aee4d00-cd47-11eb-80df-d2c142284c9d.png)
-
-
-
-# New Beginnings 
+ 
 ### Project Collaboration
-- Avelon Pang
+- Avelon Pang (relationships/controllers data & custom css) 
 - Brian Li
 
 ## Overview
